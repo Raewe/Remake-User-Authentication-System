@@ -1,6 +1,9 @@
 export default class AdminController {
     static async home(req, res) {
-        res.send("Olá mundo");
+        const name = "Pedro";
+        const surname = "henrique";
+
+        res.render("admin/index.ejs", { name, surname });
     }
 
     static async getName(req, res) {
