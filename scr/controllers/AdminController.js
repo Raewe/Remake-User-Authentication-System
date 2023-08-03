@@ -3,7 +3,7 @@ export default class AdminController {
         const name = "Pedro";
         const surname = "henrique";
 
-        res.render("admin/index.ejs", { name, surname });
+        res.render("admin/index", { name, surname });
     }
 
     static async getName(req, res) {
