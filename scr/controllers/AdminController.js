@@ -6,7 +6,15 @@ export default class AdminController {
         res.render("admin/index", { name, surname });
     }
 
-    static async getName(req, res) {
-        res.send(req.body.name);
+    static async signIn(req, res) {
+        res.status(200).json({ message: "Logado com sucesso !", status: 1 });
+    }
+
+    static async signUp(req, res) {
+        const { name, email, password, role } = req.body;
+        res.status(200).json({
+            message: "Cadastrado com Sucesso !",
+            status: 1,
+        });
     }
 }
