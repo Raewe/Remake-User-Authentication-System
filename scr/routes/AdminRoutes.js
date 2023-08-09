@@ -4,8 +4,9 @@ import AdminController from "../controllers/AdminController.js";
 
 const router = express.Router();
 
-router.get("/", AdminController.home);
-router.post("/", AdminController.signIn);
-router.post("/cadastrar", AdminController.signUp);
+router.get("/", AdminController.getHome);
+router.post("/", AdminController.handleSignInPost);
+router.get("/cadastrar", AdminController.getSignUpPage);
+router.post("/cadastrar", AdminController.handleSignUpPost);
 
 export default router;

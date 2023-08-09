@@ -1,4 +1,4 @@
-import { dirname } from "path";
+import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import express from "express";
 import cors from "cors";
@@ -28,8 +28,9 @@ connenctDb.start();
 // Ejs
 const dirName = dirname(fileURLToPath(import.meta.url));
 app.set("view engine", "ejs");
-app.set("views", `${dirName}/views/pages/`);
-app.use(express.static(`${dirName}/views/`));
+app.set("views", path.join(dirName, "views/pages"));
+app.use(express.static(path.join(dirName, "views")));
+// TODO: Error
 
 // Routes
 app.use("/admin", AdminRoutes);

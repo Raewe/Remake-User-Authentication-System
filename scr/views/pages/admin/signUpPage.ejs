@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/css/admin.css" />
+
+        <title>Cadastra Usuário</title>
+    </head>
+    <body>
+        <div class="login">
+            <h2>Cadastrar Usuário</h2>
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" />
+            <!--login__name-->
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+            <!--login__email-->
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" />
+            <!--password-->
+            <label for="confirmPassword">Confirma Senha</label>
+            <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+            />
+            <!--confirm_Password-->
+            <select class="login__role" name="role" id="role">
+                <option value="" disabled selected>Cargo</option>
+                <option value="0">Assitente</option>
+                <option value="1">Sub-Administrador</option>
+                <option value="2">Administrador</option></select
+            ><!--login__cargo-->
+            <input type="button" value="Cadastrar" onclick="signUp()" />
+        </div>
+        <!--login-->
+        <script src="/js/admin.js"></script>
+    </body>
+</html>
