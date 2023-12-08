@@ -6,8 +6,6 @@ import dotenv from "dotenv";
 import Conn from "./db/conn.js";
 import AdminRoutes from "./routes/AdminRoutes.js";
 
-// // Ejs
-
 const app = express();
 const port = 3000;
 
@@ -30,7 +28,8 @@ const dirName = dirname(fileURLToPath(import.meta.url));
 app.set("view engine", "ejs");
 app.set("views", path.join(dirName, "views/pages"));
 app.use(express.static(path.join(dirName, "views")));
-// TODO: Error
+
+// TODO: Error 404
 
 // Routes
 app.use("/admin", AdminRoutes);

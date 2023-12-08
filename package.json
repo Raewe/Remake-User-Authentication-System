@@ -13,7 +13,8 @@
     "mongoose": "^7.4.2"
   },
   "scripts": {
-    "start": "nodemon --experimental-modules scr/server.js"
+    "start": "node scr/server.js",
+    "run": "nodemon --experimental-modules scr/server.js"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",

@@ -39,7 +39,7 @@ export default class AdminController {
                     status: 2,
                 });
             }
-            if (password != confirmPassword) {
+            if (password !== confirmPassword) {
                 return res
                     .status(400)
                     .json({ message: "As senhas não coincidem!", status: 2 });
